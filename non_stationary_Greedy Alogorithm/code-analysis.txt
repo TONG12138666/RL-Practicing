@@ -1,0 +1,30 @@
+Agent Types:
+There are two agent types defined in the code:
+Sample Average Agent: Updates the Q value using the sample average method.
+Alpha Constant Update Agent: Updates the Q value using a fixed learning rate alpha.
+NonStatBandit:
+The NonStatBandit class simulates a non-smooth multi-armed gaming machine whose probability of winning varies over time (by adding noise).
+Experimental Setup:
+200 experiments (runs) are performed, each of which takes 1000 steps (steps).
+Each agent chooses an action in each step, receives a reward, and updates its Q-value.
+Result storage:
+The average reward rate of each agent in each experiment is stored in the all_rates array and finally the average reward rate of each agent is calculated and stored in the results dictionary.
+Meaning of the results graph
+X-axis (Steps):
+Indicates the number of time steps, from 1 to 1000, with each point representing the average reward rate at that time step.
+Y-axis (Average Rates):
+Represents the average reward rate for the time step, usually the total rewards earned by the agent for the time step divided by the number of time steps.
+Curves:
+Each curve represents the average performance of one agent over 200 experiments.
+The shape and height of the curve reflects the agent's ability to learn and adapt in a non-smooth environment.
+Interpretation of results
+Performance Comparison:
+By looking at the curves of different agents, you can compare their performance in non-smooth environments.
+If an agent's curve is on a higher Y value and rises faster, it is performing better at learning and adapting to environmental changes.
+Learning ability:
+If an agent's curve levels off over time, it has found a relatively stable strategy.
+If the curve fluctuates more, it means that the agent is still adapting to changes in the environment.
+Non-smoothness effects:
+Since the environment is non-stationary, an agent's performance may be affected by changes in the environment. You can observe the agent's responsiveness in the face of change.
+
+Translated with DeepL.com (free version)
